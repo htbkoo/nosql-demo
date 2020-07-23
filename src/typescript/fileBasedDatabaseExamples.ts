@@ -1,5 +1,5 @@
 import * as PouchDB from "pouchdb";
 
-const db = new PouchDB('my_database');
+const db = new PouchDB('pouchdb_database');
 
 export { db };
