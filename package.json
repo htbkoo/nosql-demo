@@ -6,5 +6,11 @@
   "repository": "https://github.com/htbkoo/nosql-demo.git",
   "author": "h1017760@connect.hku.hk",
   "license": "UNLICENSED",
-  "private": false
+  "private": false,
+  "devDependencies": {
+    "@types/jest": "^26.0.5",
+    "jest": "25.x.x",
+    "ts-jest": "25.x.x",
+    "typescript": "^3.9.7"
+  }
 }
