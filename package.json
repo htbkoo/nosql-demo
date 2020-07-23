@@ -16,6 +16,7 @@
     "typescript": "^3.9.7"
   },
   "dependencies": {
-    "pouchdb": "^7.2.1"
+    "pouchdb": "^7.2.1",
+    "pouchdb-memory": "^6.0.0"
   }
 }
