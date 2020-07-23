@@ -1,5 +1,5 @@
-import * as PouchDB from "pouchdb-memory";
+import { newInMemoryPouchDB } from "./pouchdbUtils";
 
-const db = new PouchDB('my_database');
+const dbDoctors = newInMemoryPouchDB('doctors');
 
-export { db };
+export { dbDoctors };
