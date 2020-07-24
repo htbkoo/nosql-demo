@@ -49,9 +49,11 @@ export async function getDoctorWithNameEqualsToDoctor3() {
     // TODO: implement this function
     //  we want to get the doc for `Doctor` with name equals to "doctor3"
 
-    await dbDoctors.createIndex({
-        index: { fields: ['name',] }
-    }); // To add the index for better query performance + eliminate the warning from pouchdb
+    // await dbDoctors.createIndex({
+    //     index: { fields: ['name',] }
+    // });
+    // To add the index for better query performance + eliminate the warning from pouchdb
+    // But please be aware that this might return an extra row when using `allDocs` in Batch fetch (https://pouchdb.com/api.html#batch_fetch)
 
     return dbDoctors.find({
         selector: {
@@ -63,7 +65,9 @@ export async function getDoctorWithNameEqualsToDoctor3() {
 export async function getAllDoctorsInDB() {
     // TODO: implement this function
     //  we want to get all `Doctor` doc in the DB
-
+    return dbDoctors.allDocs({
+        include_docs: true,
+    })
 }
 
 export async function getAllCommentsPlacedByDr1() {
