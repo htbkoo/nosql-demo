@@ -90,7 +90,7 @@ export async function getAllCommentsPlacedOnOrBefore2020Feb29() {
     return dbComments.find({
         selector: {
             // timestamp: { $lte: new Date(2020, 1, 29) } // yes, JS date is counter-intuitive and is a PITA to use, and that's why I prefer using library like `luxon.js` or `moment.js` (see the following line)
-            timestamp: { $lte: DateTime.utc(2020, 2, 29).toJSDate() } // Getting comments created on or before 29-Feb-2020
+            timestamp: { $lte: DateTime.utc(2020, 2, 29).toJSDate() } // Getting comments created on or before 2020-Feb-29
         },
     })
 }
@@ -101,6 +101,11 @@ export async function getAllCommentsPlacedAfter2020Feb2() {
 
     //  CAUTION: beware of the timezone issues - FYI, the timestamp is stored in UTC
 
+    return dbComments.find({
+        selector: {
+            timestamp: { $gt: DateTime.utc(2020, 2, 2).toJSDate() } // Getting comments created after 2020-Feb-2
+        },
+    })
 }
 
 export async function getAllCommentsForMember2() {
