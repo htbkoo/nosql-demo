@@ -1,6 +1,6 @@
 import PouchDB from "pouchdb";
 
-import { dbComments, dbDoctors } from "./infrastructures/systemDesignInfrastructure";
+import { dbComments, dbDoctors , dbMembers } from "./infrastructures/systemDesignInfrastructure";
 import { newInMemoryPouchdb } from "./infrastructures/pouchdbUtils";
 
 function exampleForGettingDocFromDbDoctors() {
@@ -14,6 +14,11 @@ async function exampleForGettingDocFromDbDoctorsAsAsyncFunction() {
 
 async function exampleForGettingAllComments() {
     const doc = await dbComments.allDocs();
+    return console.log(doc);
+}
+
+async function exampleForGettingAllMembers() {
+    const doc = await dbMembers.allDocs();
     return console.log(doc);
 }
 
