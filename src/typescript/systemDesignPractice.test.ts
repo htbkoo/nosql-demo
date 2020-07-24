@@ -1,4 +1,8 @@
-import { getDoctorWithIdEqualsToDr2, getDoctorWithNameEqualsToDoctor3 } from "./systemDesignPractice";
+import {
+    getAllDoctorsInDB,
+    getDoctorWithIdEqualsToDr2,
+    getDoctorWithNameEqualsToDoctor3
+} from "./systemDesignPractice";
 
 describe("System Design interview blog system", function () {
     describe("doctors", () => {
@@ -24,6 +28,33 @@ describe("System Design interview blog system", function () {
                 _id: "dr3",
                 name: "doctor3",
             });
+        });
+
+        it("should get the docs for all doctors", async () => {
+            // given
+            // when
+            const docs = await getAllDoctorsInDB();
+
+            // then
+            expect(docs).toMatchObject([
+                {
+                    _id: "dr1",
+                    name: "doctor1",
+                },
+                {
+                    _id: "dr2",
+                    name: "doctor2",
+                },
+                {
+                    _id: "dr3",
+                    name: "doctor3",
+                },
+                {
+                    _id: "dr4",
+                    name: "doctor4",
+                    profilePic: "only this doctor has profile pic, haha"
+                },
+            ]);
         });
     });
 
