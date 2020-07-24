@@ -64,6 +64,12 @@ const COMMENTS = [
         timestamp: DateTime.utc(2020, 3, 3).toJSDate(),
         placedBy: "dr3",
     },
+    {
+        _id: "comment5",
+        text: "ok",
+        timestamp: DateTime.utc(2020, 2, 29).toJSDate(),
+        placedBy: "dr2",
+    },
 ]
 
 export { DOCTORS, MEMBERS, COMMENTS }
