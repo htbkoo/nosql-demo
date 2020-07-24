@@ -113,7 +113,14 @@ export async function getAllCommentsForMember2() {
     //  we want to get all `Comment` doc with timestamp on or before 2020-Feb-29
 
     //  CAUTION: this one could be tricky
+    const member2: any = await dbMembers.get("member2");
+    const comments = await member2.comments as [];
 
+    return dbComments.find({
+        selector: {
+            _id: { $in: comments }
+        },
+    })
 }
 
 // --------
