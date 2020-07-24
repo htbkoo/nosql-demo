@@ -20,11 +20,17 @@ If the project is setup correctly, you should be able to run the following:
 
 ## Exercise
 
+### Context
 As mentioned in the deck, we would like to retrieve some data from and write some data to the `pouchdb` database.
 
-The "spec" / "requirements" can be found at the `/src/typescript/systemDesignExercise.test.ts` - unfortunately the tests are all red right now. Can you please fix them? 
+The "spec" / "requirements" can be found at the `/src/typescript/systemDesignExercise.test.ts` - unfortunately the tests are all red right now. 
 
+Can you please fix them? 🐱
+
+### Checking
 We can run the tests by running: `jest`
+
+And you should be able to see the test results. 
 
 ### Need help?
 Feel free to chat / slack me.
