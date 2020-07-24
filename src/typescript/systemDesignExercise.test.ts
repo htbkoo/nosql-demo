@@ -185,14 +185,16 @@ describe("System Design interview blog system", function () {
             const docs = await getAllCommentsForMember2();
 
             // then
-            expect(docs).toMatchObject([
-                {
-                    _id: "comment4",
-                    text: "just for recording, first time i see this patient",
-                    timestamp: DateTime.utc(2020, 3, 3).toJSDate(),
-                    placedBy: "dr3",
-                },
-            ]);
+            expect(docs).toMatchObject({
+                docs: [
+                    {
+                        _id: "comment4",
+                        text: "just for recording, first time i see this patient",
+                        timestamp: "2020-03-03T00:00:00.000Z",
+                        placedBy: "dr3",
+                    },
+                ]
+            });
         });
     });
 
