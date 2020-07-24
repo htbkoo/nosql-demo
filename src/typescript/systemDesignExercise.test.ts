@@ -1,5 +1,5 @@
 import {
-    getAllCommentsPlacedByDr1, getAllCommentsPlacedOnOrBefore2020Feb29,
+    getAllCommentsPlacedByDr1, getAllCommentsPlacedOnOrAfter2020Feb1, getAllCommentsPlacedOnOrBefore2020Feb29,
     getAllDoctorsInDB,
     getDoctorWithIdEqualsToDr2,
     getDoctorWithNameEqualsToDoctor3
@@ -93,7 +93,6 @@ describe("System Design interview blog system", function () {
             // then
             expect(docs).toMatchObject({
                 docs: [
-
                     {
                         _id: "comment1",
                         text: "member1 is sick",
@@ -110,15 +109,64 @@ describe("System Design interview blog system", function () {
             });
         });
 
-        it("should get all the comments placed on or before 2020-Feb-209", async () => {
+        it("should get all the comments placed on or before 2020-Feb-29", async () => {
             // given
             // when
             const docs = await getAllCommentsPlacedOnOrBefore2020Feb29();
 
             // then
-            expect(docs).toMatchObject([
+            expect(docs).toMatchObject({
+                docs: [
+                    {
+                        _id: "comment1",
+                        text: "member1 is sick",
+                        timestamp: "2020-01-01T00:00:00.000Z",
+                        placedBy: "dr1",
+                    },
+                    {
+                        _id: "comment2",
+                        text: "member1 is healthy",
+                        timestamp: "2020-02-02T00:00:00.000Z",
+                        placedBy: "dr2",
+                    },
+                    {
+                        _id: "comment3",
+                        text: "no, member1 is sick, stop arguing about that",
+                        timestamp: "2020-02-05T00:00:00.000Z",
+                        placedBy: "dr1",
+                    },
+                ]
+            });
+        });
 
-            ]);
+        it("should get all the comments placed on or after 2020-Feb-1", async () => {
+            // given
+            // when
+            const docs = await getAllCommentsPlacedOnOrAfter2020Feb1();
+
+            // then
+            expect(docs).toMatchObject({
+                docs: [
+                    {
+                        _id: "comment2",
+                        text: "member1 is healthy",
+                        timestamp: DateTime.utc(2020, 2, 2).toJSDate(),
+                        placedBy: "dr2",
+                    },
+                    {
+                        _id: "comment3",
+                        text: "no, member1 is sick, stop arguing about that",
+                        timestamp: DateTime.utc(2020, 2, 5).toJSDate(),
+                        placedBy: "dr1",
+                    },
+                    {
+                        _id: "comment4",
+                        text: "just for recording, first time i see this patient",
+                        timestamp: DateTime.utc(2020, 3, 3).toJSDate(),
+                        placedBy: "dr3",
+                    },
+                ]
+            });
         });
     });
 })
