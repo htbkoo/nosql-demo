@@ -4,7 +4,7 @@ import {
     getAllCommentsPlacedOnOrBefore2020Feb29,
     getAllDoctorsInDB,
     getDoctorWithIdEqualsToDr2,
-    getDoctorWithNameEqualsToDoctor3
+    getDoctorWithNameEqualsToDoctor3, getAllCommentsForMember2
 } from "./systemDesignExercise";
 import { DateTime } from "luxon";
 
@@ -175,6 +175,22 @@ describe("System Design interview blog system", function () {
                     },
                 ]
             });
+        });
+
+        it("should get all the comments for member2", async () => {
+            // given
+            // when
+            const docs = await getAllCommentsForMember2();
+
+            // then
+            expect(docs).toMatchObject([
+                {
+                    _id: "comment4",
+                    text: "just for recording, first time i see this patient",
+                    timestamp: DateTime.utc(2020, 3, 3).toJSDate(),
+                    placedBy: "dr3",
+                },
+            ]);
         });
     });
 })
