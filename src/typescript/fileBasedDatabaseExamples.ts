@@ -1,4 +1,4 @@
-import * as PouchDB from "pouchdb";
+import PouchDB from "pouchdb";
 
 const db = new PouchDB('pouchdb_database');
 
