@@ -13,7 +13,7 @@ This is a small repo for some very simple exercise / demos for usage of a NoSQL 
 Check out this repo and run the following at the project root:
 1. `yarn`
 
-### Test project setup
+### Check project setup
 If the project is setup correctly, you should be able to run the following:
 1. `jest` - this would run all the tests under the project (but by default you should see all tests being red because this is the exercise - fix all of them! :-) ) 
 2. `ts-node src/typescript/playground.ts` - this would run the `playground.ts` which is a, well, playground sandbox that you can mess around - feel free to experiment the [`pouchdb` APIs](https://pouchdb.com/api.html) there!
@@ -32,6 +32,12 @@ We can run the tests by running: `jest`
 
 And you should be able to see the test results. 
 
+### Caveat
+
+For simplicity, I had used the `pouchdb-adapter-memory` plugin for `pouchdb` so the databases created in the exercise are transient and stored in-memory (and thus would be reset for each run).
+
+If you want to see how to persist the data (e.g. in files), feel free to take a look at `/src/typescript/fileBasedDatabaseExamples.ts`
+
 ### Need help?
 Feel free to chat / slack me.
 
@@ -45,6 +51,9 @@ Or you may want to take a look at [the `pouchdb` documentations](https://pouchdb
 ## Folder Structure
 You can find all the source files you need under `src` folder.
 
-In particular, you might want to look at `/src/typescript/systemDesignExercise.ts`, `/src/typescript/systemDesignExercise.test.ts`,`/src/typescript/playground.ts` and `/src/typescript/fileBasedDatabaseExamples.ts`.
+In particular, you might want to look at the following files:
+ 1. `/src/typescript/systemDesignExercise.ts` + `/src/typescript/systemDesignExercise.test.ts` - these are the excercise files
+ 2. `/src/typescript/playground.ts` - this is a sandbox code which you can change and quickly test out the APIs
+ 3. `/src/typescript/fileBasedDatabaseExamples.ts` - this is an example usage of file-based `pouchdb` database - if you run this file, a folder `pouchdb_database` would be created with some `pouchdb` data files created inside
 
 Feel free to ignore the other files such as `package.json`, `yarn.lock`, `jest.config.js` for now (mainly for project configuration)
