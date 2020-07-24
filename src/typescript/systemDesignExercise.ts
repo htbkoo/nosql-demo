@@ -30,6 +30,10 @@ async function exampleForCreatingNewFileBasedDatabase() {
 // TODO: feel free to not use `await` if you found it unfamiliar
 // TODO ------------------------------
 
+// --------
+// READ
+// --------
+
 export async function getDoctorWithIdEqualsToDr2() {
     // TODO: implement this function
     //  we want to get the doc for `Doctor` with docId equals to "dr2"
@@ -78,6 +82,10 @@ export async function getAllCommentsForMember2() {
 
 }
 
+// --------
+// CREATE
+// --------
+
 export async function createDbWithSomeInteractions() {
     const INTERACTIONS = [
         {
@@ -107,6 +115,16 @@ export async function createDbWithSomeInteractions() {
     //  CAUTION: this one could also be tricky :-)
 
 }
+
+// --------
+// UPDATE
+// --------
+
+
+// --------
+// DELETE
+// --------
+
 
 // TODO ------------------------------
 // TODO: END - implement the functions above!
