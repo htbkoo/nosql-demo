@@ -39,7 +39,7 @@ For simplicity, I had used the `pouchdb-adapter-memory` plugin for `pouchdb` so 
 If you want to see how to persist the data (e.g. in files), feel free to take a look at `/src/typescript/fileBasedDatabaseExamples.ts`
 
 ### Need help?
-Feel free to chat / slack me.
+Feel free to chat / slack me or shout in the slack group.
 
 Or you may want to take a look at [the `pouchdb` documentations](https://pouchdb.com/) (trust me, they are pretty well-written):
 1. [API](https://pouchdb.com/api.html)
