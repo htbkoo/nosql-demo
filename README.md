@@ -15,8 +15,8 @@ Check out this repo and run the following at the project root:
 
 ### Check project setup
 If the project is setup correctly, you should be able to run the following:
-1. `jest` - this would run all the tests under the project (but by default you should see all tests being red because this is the exercise - fix all of them! :-) ) 
-2. `ts-node src/typescript/playground.ts` - this would run the `playground.ts` which is a, well, playground sandbox that you can mess around - feel free to experiment the [`pouchdb` APIs](https://pouchdb.com/api.html) there!
+1. `yarn jest` - this would run all the tests under the project (but by default you should see all tests being red because this is the exercise - fix all of them! :-) ) 
+2. `yarn ts-node src/typescript/playground.ts` - this would run the `playground.ts` which is a, well, playground sandbox that you can mess around - feel free to experiment the [`pouchdb` APIs](https://pouchdb.com/api.html) there!
 
 ## Exercise
 
@@ -28,7 +28,7 @@ The "spec" / "requirements" can be found at the `/src/typescript/systemDesignExe
 Can you please fix them? 🐱
 
 ### Checking
-We can run the tests by running: `jest`
+We can run the tests by running: `yarn jest`
 
 And you should be able to see the test results. 
 
