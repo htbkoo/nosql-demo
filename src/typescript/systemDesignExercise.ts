@@ -73,7 +73,11 @@ export async function getAllDoctorsInDB() {
 export async function getAllCommentsPlacedByDr1() {
     // TODO: implement this function
     //  we want to get all `Comment` doc `placedBy` `dr1`
-
+    return dbComments.find({
+        selector: {
+            placedBy: { $eq: "dr1" }
+        }
+    })
 }
 
 export async function getAllCommentsPlacedOnOrBefore2020Feb29() {
