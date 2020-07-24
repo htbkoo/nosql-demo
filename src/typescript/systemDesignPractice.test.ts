@@ -8,7 +8,7 @@ describe("System Design interview blog system", function () {
             const docs = await getDoctorWithIdEqualsToDr2();
 
             // then
-            expect(docs).toEqual({
+            expect(docs).toMatchObject({
                 _id: "dr2",
                 name: "doctor2",
             });
