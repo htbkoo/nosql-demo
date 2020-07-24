@@ -2,7 +2,7 @@ import {
     getAllDoctorsInDB,
     getDoctorWithIdEqualsToDr2,
     getDoctorWithNameEqualsToDoctor3
-} from "./systemDesignPractice";
+} from "./systemDesignExercise";
 
 describe("System Design interview blog system", function () {
     describe("doctors", () => {
