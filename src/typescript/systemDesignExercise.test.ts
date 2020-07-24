@@ -1,9 +1,10 @@
 import {
-    getAllCommentsPlacedByDr1,
+    getAllCommentsPlacedByDr1, getAllCommentsPlacedOnOrBefore2020Feb29,
     getAllDoctorsInDB,
     getDoctorWithIdEqualsToDr2,
     getDoctorWithNameEqualsToDoctor3
 } from "./systemDesignExercise";
+import { DateTime } from "luxon";
 
 describe("System Design interview blog system", function () {
     describe("doctors", () => {
@@ -90,15 +91,29 @@ describe("System Design interview blog system", function () {
             const docs = await getAllCommentsPlacedByDr1();
 
             // then
-            expect(docs).toMatchObject([
+            expect(docs).toMatchObject({
+                docs: [
 
-            ]);
+                    {
+                        _id: "comment1",
+                        text: "member1 is sick",
+                        timestamp: "2020-01-01T00:00:00.000Z",
+                        placedBy: "dr1",
+                    },
+                    {
+                        _id: "comment3",
+                        text: "no, member1 is sick, stop arguing about that",
+                        timestamp: "2020-02-05T00:00:00.000Z",
+                        placedBy: "dr1",
+                    },
+                ]
+            });
         });
 
-        it("should get all the comments placed by doctor with docId=dr1", async () => {
+        it("should get all the comments placed on or before 2020-Feb-209", async () => {
             // given
             // when
-            const docs = await getAllCommentsPlacedByDr1();
+            const docs = await getAllCommentsPlacedOnOrBefore2020Feb29();
 
             // then
             expect(docs).toMatchObject([
