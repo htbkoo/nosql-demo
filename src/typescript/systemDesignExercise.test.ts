@@ -1,5 +1,7 @@
 import {
-    getAllCommentsPlacedByDr1, getAllCommentsPlacedOnOrAfter2020Feb1, getAllCommentsPlacedOnOrBefore2020Feb29,
+    getAllCommentsPlacedByDr1,
+    getAllCommentsPlacedAfter2020Feb2,
+    getAllCommentsPlacedOnOrBefore2020Feb29,
     getAllDoctorsInDB,
     getDoctorWithIdEqualsToDr2,
     getDoctorWithNameEqualsToDoctor3
@@ -135,35 +137,41 @@ describe("System Design interview blog system", function () {
                         timestamp: "2020-02-05T00:00:00.000Z",
                         placedBy: "dr1",
                     },
+                    {
+                        _id: "comment5",
+                        text: "ok",
+                        timestamp: "2020-02-29T00:00:00.000Z",
+                        placedBy: "dr2",
+                    },
                 ]
             });
         });
 
-        it("should get all the comments placed on or after 2020-Feb-1", async () => {
+        it("should get all the comments placed after 2020-Feb-2", async () => {
             // given
             // when
-            const docs = await getAllCommentsPlacedOnOrAfter2020Feb1();
+            const docs = await getAllCommentsPlacedAfter2020Feb2();
 
             // then
             expect(docs).toMatchObject({
                 docs: [
                     {
-                        _id: "comment2",
-                        text: "member1 is healthy",
-                        timestamp: DateTime.utc(2020, 2, 2).toJSDate(),
-                        placedBy: "dr2",
-                    },
-                    {
                         _id: "comment3",
                         text: "no, member1 is sick, stop arguing about that",
-                        timestamp: DateTime.utc(2020, 2, 5).toJSDate(),
+                        timestamp: "2020-02-05T00:00:00.000Z",
                         placedBy: "dr1",
                     },
                     {
                         _id: "comment4",
                         text: "just for recording, first time i see this patient",
-                        timestamp: DateTime.utc(2020, 3, 3).toJSDate(),
+                        timestamp: "2020-03-03T00:00:00.000Z",
                         placedBy: "dr3",
+                    },
+                    {
+                        _id: "comment5",
+                        text: "ok",
+                        timestamp: "2020-02-29T00:00:00.000Z",
+                        placedBy: "dr2",
                     },
                 ]
             });
