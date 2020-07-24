@@ -4,8 +4,8 @@ This is a small repo for some very simple exercise / demos for usage of a NoSQL 
 ## Project setup
 
 ### Prerequisite
-1. `node` (tested version: `v8.17.0`) 
-2. `yarn` (tested version: `1.22.4`)
+1. [`node`](https://nodejs.org/en/) (tested version: `v8.17.0`) 
+2. [`yarn`](https://yarnpkg.com/getting-started/install) (tested version: `1.22.4`)
 
 (Note: yes, `pouchdb` does NOT need to be installed separately because it is a pure JavaScript implemented NoSQL DB and would be installed when you run `yarn` to install the `npm` dependencies. Hurrah! 🎉)  
 
