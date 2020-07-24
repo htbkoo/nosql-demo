@@ -78,7 +78,7 @@ export async function getAllCommentsForMember2() {
 
 }
 
-export async function getDbWithSomeInteractions() {
+export async function createDbWithSomeInteractions() {
     const INTERACTIONS = [
         {
             _id: "interaction1",
