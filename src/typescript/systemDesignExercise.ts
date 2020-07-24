@@ -49,6 +49,15 @@ export async function getDoctorWithNameEqualsToDoctor3() {
     // TODO: implement this function
     //  we want to get the doc for `Doctor` with name equals to "doctor3"
 
+    await dbDoctors.createIndex({
+        index: { fields: ['name',] }
+    }); // To add the index for better query performance + eliminate the warning from pouchdb
+
+    return dbDoctors.find({
+        selector: {
+            name: { $eq: "doctor3" }
+        },
+    })
 }
 
 export async function getAllDoctorsInDB() {
