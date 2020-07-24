@@ -11,4 +11,7 @@ describe("System Design interview blog system", function () {
             expect(docs).toEqual([]);
         });
     });
+
+    describe("comments", () => {
+    });
 })
