@@ -66,9 +66,9 @@ export async function getAllCommentsPlacedOnOrBefore2020Feb29() {
 
 }
 
-export async function getAllCommentsPlacedOnOrAfter2020Feb1() {
+export async function getAllCommentsPlacedAfter2020Feb2() {
     // TODO: implement this function
-    //  we want to get all `Comment` doc with timestamp on or before 2020-Feb-29
+    //  we want to get all `Comment` doc with timestamp after 2020-Feb-2
 
     //  CAUTION: beware of the timezone issues - FYI, the timestamp is stored in UTC
 
