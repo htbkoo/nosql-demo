@@ -49,19 +49,19 @@ const COMMENTS = [
     {
         _id: "comment2",
         text: "member1 is healthy",
-        timestamp: DateTime.utc(2020, 1, 2).toJSDate(),
+        timestamp: DateTime.utc(2020, 2, 2).toJSDate(),
         placedBy: "dr2",
     },
     {
         _id: "comment3",
         text: "no, member1 is sick, stop arguing about that",
-        timestamp: DateTime.utc(2020, 1, 3).toJSDate(),
+        timestamp: DateTime.utc(2020, 2, 5).toJSDate(),
         placedBy: "dr1",
     },
     {
         _id: "comment4",
         text: "just for recording, first time i see this patient",
-        timestamp: DateTime.utc(2020, 1, 1).toJSDate(),
+        timestamp: DateTime.utc(2020, 3, 3).toJSDate(),
         placedBy: "dr3",
     },
 ]

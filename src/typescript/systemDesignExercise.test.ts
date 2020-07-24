@@ -1,4 +1,5 @@
 import {
+    getAllCommentsPlacedByDr1,
     getAllDoctorsInDB,
     getDoctorWithIdEqualsToDr2,
     getDoctorWithNameEqualsToDoctor3
@@ -83,5 +84,26 @@ describe("System Design interview blog system", function () {
     });
 
     describe("comments", () => {
+        it("should get all the comments placed by doctor with docId=dr1", async () => {
+            // given
+            // when
+            const docs = await getAllCommentsPlacedByDr1();
+
+            // then
+            expect(docs).toMatchObject([
+
+            ]);
+        });
+
+        it("should get all the comments placed by doctor with docId=dr1", async () => {
+            // given
+            // when
+            const docs = await getAllCommentsPlacedByDr1();
+
+            // then
+            expect(docs).toMatchObject([
+
+            ]);
+        });
     });
 })
