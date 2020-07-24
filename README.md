@@ -26,6 +26,16 @@ The "spec" / "requirements" can be found at the `/src/typescript/systemDesignExe
 
 We can run the tests by running: `jest`
 
+### Need help?
+Feel free to chat / slack me.
+
+Or you may want to take a look at [the `pouchdb` documentations](https://pouchdb.com/) (trust me, they are pretty well-written):
+1. [API](https://pouchdb.com/api.html)
+2. [Learn](https://pouchdb.com/learn.html)
+3. [Guides](https://pouchdb.com/guides/)
+4. [Blogs](https://pouchdb.com/blog/)
+    1. [A very good blog by `pouchdb` creator about `promise`](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
+
 ## Folder Structure
 You can find all the source files you need under `src` folder.
 
