@@ -40,25 +40,45 @@ describe("System Design interview blog system", function () {
             const docs = await getAllDoctorsInDB();
 
             // then
-            expect(docs).toMatchObject([
-                {
-                    _id: "dr1",
-                    name: "doctor1",
-                },
-                {
-                    _id: "dr2",
-                    name: "doctor2",
-                },
-                {
-                    _id: "dr3",
-                    name: "doctor3",
-                },
-                {
-                    _id: "dr4",
-                    name: "doctor4",
-                    profilePic: "only this doctor has profile pic, haha"
-                },
-            ]);
+            expect(docs).toMatchObject({
+                "offset": 0,
+                "rows": [
+                    {
+                        "id": "dr1",
+                        "key": "dr1",
+                        "doc": {
+                            "name": "doctor1",
+                            "_id": "dr1",
+                        }
+                    },
+                    {
+                        "id": "dr2",
+                        "key": "dr2",
+                        "doc": {
+                            "name": "doctor2",
+                            "_id": "dr2",
+                        }
+                    },
+                    {
+                        "id": "dr3",
+                        "key": "dr3",
+                        "doc": {
+                            "name": "doctor3",
+                            "_id": "dr3",
+                        }
+                    },
+                    {
+                        "id": "dr4",
+                        "key": "dr4",
+                        "doc": {
+                            "name": "doctor4",
+                            "_id": "dr4",
+                            "profilePic": "only this doctor has profile pic, haha",
+                        }
+                    }
+                ],
+                "total_rows": 4
+            });
         });
     });
 
