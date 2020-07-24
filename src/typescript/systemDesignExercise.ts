@@ -1,7 +1,7 @@
 import PouchDB from "pouchdb";
 import { DateTime } from "luxon";
 
-import { dbComments, dbDoctors , dbMembers } from "./infrastructures/systemDesignInfrastructure";
+import { dbComments, dbDoctors, dbMembers } from "./infrastructures/systemDesignInfrastructure";
 import { newInMemoryPouchdb } from "./infrastructures/pouchdbUtils";
 
 function exampleForGettingDocFromDbDoctors() {
@@ -148,6 +148,9 @@ export async function createDbWithSomeInteractions() {
 
     //  CAUTION: this one could also be tricky :-)
 
+    const db = await newInMemoryPouchdb("interactions")
+    await db.bulkDocs(INTERACTIONS);
+    return db;
 }
 
 // --------
