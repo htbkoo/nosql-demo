@@ -42,7 +42,7 @@ async function exampleForCreatingNewFileBasedDatabase() {
 export async function getDoctorWithIdEqualsToDr2() {
     // TODO: implement this function
     //  we want to get the doc for `Doctor` with docId equals to "dr2"
-
+    return dbDoctors.get("dr2")
 }
 
 export async function getDoctorWithNameEqualsToDoctor3() {
