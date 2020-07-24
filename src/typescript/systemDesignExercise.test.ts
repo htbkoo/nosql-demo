@@ -1,10 +1,12 @@
 import {
-    getAllCommentsPlacedByDr1,
+    createDbWithSomeInteractions,
+    getAllCommentsForMember2,
     getAllCommentsPlacedAfter2020Feb2,
+    getAllCommentsPlacedByDr1,
     getAllCommentsPlacedOnOrBefore2020Feb29,
     getAllDoctorsInDB,
     getDoctorWithIdEqualsToDr2,
-    getDoctorWithNameEqualsToDoctor3, getAllCommentsForMember2
+    getDoctorWithNameEqualsToDoctor3
 } from "./systemDesignExercise";
 import { DateTime } from "luxon";
 
@@ -191,6 +193,53 @@ describe("System Design interview blog system", function () {
                     placedBy: "dr3",
                 },
             ]);
+        });
+    });
+
+    describe("interactions", () => {
+        it("should create a new database with interactions", async () => {
+            // given
+            const db: any = await createDbWithSomeInteractions();
+
+            // when
+            const docs = await db.allDocs({
+                include_docs: true,
+            })
+
+            // then
+            expect(docs).toMatchObject({
+                "offset": 0,
+                "rows": [
+                    {
+                        "id": "interaction1",
+                        "key": "interaction1",
+                        "doc": {
+                            _id: "interaction1",
+                            doctor: "dr1",
+                            member: "member1"
+                        }
+                    },
+                    {
+                        "id": "interaction2",
+                        "key": "interaction2",
+                        "doc": {
+                            _id: "interaction2",
+                            doctor: "dr2",
+                            member: "member1"
+                        }
+                    },
+                    {
+                        "id": "interaction3",
+                        "key": "interaction3",
+                        "doc": {
+                            _id: "interaction3",
+                            doctor: "dr3",
+                            member: "member2"
+                        }
+                    },
+                ],
+                "total_rows": 3
+            });
         });
     });
 })
