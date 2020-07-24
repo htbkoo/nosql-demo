@@ -52,7 +52,7 @@ Or you may want to take a look at [the `pouchdb` documentations](https://pouchdb
 You can find all the source files you need under `src` folder.
 
 In particular, you might want to look at the following files:
- 1. `/src/typescript/systemDesignExercise.ts` + `/src/typescript/systemDesignExercise.test.ts` - these are the excercise files
+ 1. `/src/typescript/systemDesignExercise.ts` + `/src/typescript/systemDesignExercise.test.ts` - these are the exercise files
  2. `/src/typescript/playground.ts` - this is a sandbox code which you can change and quickly test out the APIs
  3. `/src/typescript/fileBasedDatabaseExamples.ts` - this is an example usage of file-based `pouchdb` database - if you run this file, a folder `pouchdb_database` would be created with some `pouchdb` data files created inside
 
