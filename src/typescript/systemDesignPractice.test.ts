@@ -25,8 +25,12 @@ describe("System Design interview blog system", function () {
 
             // then
             expect(docs).toMatchObject({
-                _id: "dr3",
-                name: "doctor3",
+                docs: [
+                    {
+                        _id: "dr3",
+                        name: "doctor3",
+                    }
+                ]
             });
         });
 
