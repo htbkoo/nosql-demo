@@ -81,7 +81,7 @@ export async function getAllCommentsPlacedAfter2020Feb2() {
 
 export async function getAllCommentsForMember2() {
     // TODO: implement this function
-    //  we want to get all `Comment` doc with timestamp on or before 2020-Feb-29
+    //  we want to get all `Comment` doc for `Member` with name equals to "member2"
 
     //  CAUTION: this one could be tricky
 
