@@ -1,6 +1,6 @@
 {
   "name": "htbkoo-nosql-demo",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "some small demos fo usage of nosql",
   "main": "index.js",
   "repository": "https://github.com/htbkoo/nosql-demo.git",
