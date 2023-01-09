@@ -18,7 +18,7 @@
     "typescript": "^3.9.7"
   },
   "dependencies": {
-    "luxon": "^1.24.1",
+    "luxon": "^1.28.1",
     "pouchdb": "^7.2.1",
     "pouchdb-find": "^7.2.1",
     "pouchdb-memory": "^6.0.0"
